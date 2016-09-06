@@ -194,7 +194,12 @@ tmpFolder = sprintf('%sToolbox',toolboxName);
 pname = fullfile(tempdir,tmpFolder);
 
 %% Download and unzip toolbox (GitHub)
-url = sprintf('https://github.com/kstrotz/%sToolbox/archive/master.zip',toolboxName);
+if (strcmp(toolboxName,'Transformation')) || (strcmp(toolboxName,'Plotting'))
+    url = sprintf('https://github.com/kutzer/%sToolbox/archive/master.zip',toolboxName);
+else
+    url = sprintf('https://github.com/kstrotz/%sToolbox/archive/master.zip',toolboxName);
+end
+
 try
     fnames = unzip(url,pname);
     fprintf('SUCCESS\n');
