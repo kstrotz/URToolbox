@@ -51,7 +51,7 @@ classdef UR < handle
         function obj = UR(prevServer)
             global URMod;                           % Global variable for custom Python module
             % IMPORT PYTHON MODULES: DO NOT INCLUDE .py
-            URMod = py.importlib.import_module('URServer');
+            URMod = py.importlib.import_module('C:\Program Files\MATLAB\R2016a\toolbox\ur\URServer');
             fprintf('Python module imported.\n');          % Indicate modules imported
             if nargin < 1
                 host = input('Enter server IP address: ','s');
