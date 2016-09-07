@@ -51,7 +51,7 @@ classdef UR < handle
         function obj = UR(prevServer)
             global URMod;                           % Global variable for custom Python module
             % IMPORT PYTHON MODULES: DO NOT INCLUDE .py
-            addpath('C:\Program Files\MATLAB\R2016a\toolbox\ur\URToolboxSupport');
+            addpath('C:\Program Files\MATLAB\R2016a\toolbox\ur');
             URMod = py.importlib.import_module('URServer');
             fprintf('Python module imported.\n');          % Indicate modules imported
             if nargin < 1
