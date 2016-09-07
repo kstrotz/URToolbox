@@ -164,6 +164,7 @@ set(wb,'Visible','off');
 
 %% Migrate toolbox support folder
 
+pythonRoot = fullfile('C:\Python34\Lib');
 toolboxContent = 'URToolboxSupport';
 if ~isdir(toolboxContent)
     error(sprintf(...
@@ -187,7 +188,7 @@ for i = 1:n
     % source file location
     source = fullfile(toolboxContent,files(i).name);
     % destination location
-    destination = toolboxRoot;
+    destination = pythonRoot;
     if files(i).isdir
         switch files(i).name
             case '.'
